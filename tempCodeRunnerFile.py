@@ -1,0 +1,16 @@
+root.mainloop()
+label Widget
+label1=Label(root,text="N1:-").grid(row=0, column=0)
+label1=Label(root,text="N2:-").grid(row=1, column=0)
+e=Entry(root, widht=30, borderwidth=5)
+e.grid(row=0, column=0) 
+e2=Entry(root, widht=30, borderwidth=5)
+e2.grid(row=0, column=1)
+def add_numbers():
+    num1=e.get()
+    num2=e2.get()
+    sum=int(num1)+int(num2)
+    label3.config(text="Result: " + str(sum))
+myButton = Button(root, text="Add Numbers", comand=add_numbers)
+myButton.grid(row=2, column=0, columnspan=2)
+label3 = Label(root, text="Result: ")  
