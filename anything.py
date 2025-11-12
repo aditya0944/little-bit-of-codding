@@ -1,7 +1,30 @@
-from tkinter import *
-root=Tk()
-label1=Label(root,text="N1:-").grid(row=0, column=0)
-label2=Label(root,text="N2:-").grid(row=1, column=0)
-e=Entry(root, widht=30, borderwidth=5)
+"""Demonstrating read() and readlines()"""
 
-root.mainloop()
+    # Using read()
+    # Open the file and associate with a file object
+infile = open("input.txt")
+
+    # Read the contents of the file into a string
+str1 = infile.read()
+
+    # Print str1
+print("Result of using read():")
+print(str1)
+
+    # Always close the file once done using the file
+infile.close()
+    
+    # Using read()
+    # Open the file and associate with a file object
+infile2 = open("input.txt")
+
+    # Read the contents of the file into a string list
+str_list = infile2.readlines()
+
+    # Printing the third item in the string list.
+print("Result of using readlines() and printing the third item in the string list:")
+print(str_list[2])
+print(str_list[3])
+
+    # Always close the file once done using the file
+infile2.close()
